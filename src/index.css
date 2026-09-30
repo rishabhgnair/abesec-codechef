@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-arcade-dark text-slate-100 font-sans;
+    overflow-x: hidden;
+  }
+
+  /* Custom arcade scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060814;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f2b60;
+    border-radius: 4px;
+    border: 1px solid #00e5ff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffe600;
+  }
+}
+
+/* Retro CRT / Arcade scanline texture */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Neon text & border glows */
+.neon-border-yellow {
+  border: 2px solid #ffe600;
+  box-shadow: 0 0 10px rgba(255, 230, 0, 0.4), inset 0 0 6px rgba(255, 230, 0, 0.2);
+}
+
+.neon-border-blue {
+  border: 2px solid #0051ff;
+  box-shadow: 0 0 10px rgba(0, 81, 255, 0.4), inset 0 0 6px rgba(0, 81, 255, 0.2);
+}
+
+.neon-border-cyan {
+  border: 2px solid #00e5ff;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.4), inset 0 0 6px rgba(0, 229, 255, 0.2);
+}
+
+.neon-border-pink {
+  border: 2px solid #ff4081;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.4), inset 0 0 6px rgba(255, 64, 129, 0.2);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 8px rgba(255, 230, 0, 0.7);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(255, 23, 68, 0.7);
+}
